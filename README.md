@@ -14,15 +14,15 @@ Create config file `config.js` which exports `configs` with this structure :
 export const configs = [
   {
     env: "qa",
-    brokers: "",
+    brokers: "broker1.com,broker2.com,broker3.com",
   },
   {
     env: "preprod",
-    brokers: "",
+    brokers: "broker1.com,broker2.com,broker3.com",
   },
   {
     env: "prod",
-    brokers: "",
+    brokers: "broker1.com,broker2.com,broker3.com",
   }
 ];
 ```
