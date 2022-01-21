@@ -1,3 +1,5 @@
 *.json
+!package*.json
+!example.json
 node_modules
 config.js

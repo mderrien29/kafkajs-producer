@@ -1,0 +1,9 @@
+{
+  "dependencies": {
+    "kafkajs": "^1.15.0",
+    "zx": "^4.3.0"
+  },
+  "scripts": {
+    "start": "npx zx ./index.mjs"
+  }
+}
