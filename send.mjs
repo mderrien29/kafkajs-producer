@@ -21,8 +21,6 @@ await makeSureUserConsent(config.brokers, topic, messages);
 
 await sendMessage(config.brokers, topic, messages);
 
-console.log("Enjoy the rest of your day.")
-
 // Functions
 
 async function extractMessagesFromFile(filename) {

@@ -2,7 +2,7 @@
 
 > small script to produce messages manually using kafkajs. It uses [Zx](https://github.com/google/zx) and [KafkaJS](https://github.com/tulios/kafkajs).
 
-Sometimes, you need to manually produce some messages in a KafkaJS topic. Sometimes, you need to produce a lot of messages. This script allows you to write a simple JSON file, and to push it to a topic. You can save multiple environments in the config, so you can try your script in local before pushing to production.
+Sometimes, you need to manually produce some messages in a KafkaJS topic. Sometimes, you need to produce a lot of messages. This script allows you to write a simple JSON file, and to push it to a topic. Also included is a small docker-compose of a Kafka/Zookeeper combo so you can try it out before adding your configs in `index.mjs`.
 
 ## Setup
 
