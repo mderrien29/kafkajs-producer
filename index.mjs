@@ -1,6 +1,8 @@
 #!/usr/bin/env zx
 import {Kafka} from "kafkajs";
 
+// Edit the following config if you want to use other brokers.
+
 const configs = [
   {
     "env": "local",
@@ -10,7 +12,7 @@ const configs = [
 
 // Script
 
-console.log("Kafka producer script - 0.5.1 - mderrien");
+console.log("Kafka producer script - 0.5.2 - mderrien");
 
 const config = await selectConfigByEnv(configs);
 const topic = await question("topic > ");
@@ -20,7 +22,6 @@ displayOptions(config.brokers, topic, messages);
 await makeSureUserConsent(config.brokers, topic, messages);
 
 await sendMessage(config.brokers, topic, messages);
-
 console.log("Enjoy the rest of your day.")
 
 // Functions
@@ -50,7 +51,7 @@ async function selectConfigByEnv(configs) {
 }
 
 async function selectMessagesToSend() {
-  const filename = await question("filename > ");
+  const filename = await question("filename (eg: messages/example.json) > ");
   const messages = await extractMessagesFromFile(filename);
 
   if (!messages.length) {
@@ -72,6 +73,7 @@ function displayOptions(brokers, topic, messages) {
   console.log('');
   console.log('Number of messages');
   console.log(`\t${messages.length}`);
+  console.log('###');
   console.log('');
 }
 
